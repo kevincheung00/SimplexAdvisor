@@ -1,0 +1,27 @@
+{
+  "name": "financeai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevincheung00/StockSelector-Test.git"
+  },
+  "keywords": [
+    "AI",
+    "Finance"
+  ],
+  "author": "Richard Lii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevincheung00/StockSelector-Test/issues"
+  },
+  "homepage": "https://github.com/kevincheung00/StockSelector-Test#readme",
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
