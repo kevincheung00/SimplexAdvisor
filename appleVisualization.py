@@ -13,7 +13,7 @@ if ipy is not None:
 # loading dataset into Pandas DataFrame
 # df = pd.read_csv(url, names=['sepal length','sepal width','petal length','petal width','target'])
 
-df = pd.read_csv("combined_csv.csv", names=["Open", "High", "Low", "Close", "Volume", "Ex-Dividend", "Split", "Adj Open", "Adj High", "Adj Low", "Adj Close", "Adj Volume", "Company"])
+df = pd.read_csv("appleDF.csv", names=["Open", "High", "Low", "Close", "Volume", "Ex-Dividend", "Split", "Adj Open", "Adj High", "Adj Low", "Adj Close", "Adj Volume", "Company"])
 
 from sklearn.preprocessing import StandardScaler
 
@@ -37,21 +37,12 @@ ax = fig.add_subplot(1,1,1)
 ax.set_xlabel('Principal Component 1', fontsize = 15)
 ax.set_ylabel('Principal Component 2', fontsize = 15)
 ax.set_title('2 component PCA', fontsize = 20)
-targets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o']
-colors = ['r', 'g', 'b', 'y', 'green', 'black', "grey", "orange", "purple", "pink", "brown", "beige", "maroon", "bronze", "gold"]
-# for target, color in zip(targets,colors):
-#     indicesToKeep = finalDf['Company'] == target
-#     ax.scatter(finalDf.loc[indicesToKeep, 'principal component 1']
-#                , finalDf.loc[indicesToKeep, 'principal component 2']
-#                , c=color
-#                , s = 50)
-
-for target, color in zip(targets,colors):
+targets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', "q", "r", "s","t", "u", "v", "w", "x", "y", "z", "aa", "bb", "cc", "dd", "ee", "ff", "gg", "hh", "ii", "jj", "kk", "ll", "mm", "nn", "oo", "pp", "qq", "rr", "ss", "tt", "uu", "vv", "ww", "xx", "yy", "zz", "aaa", "bbb", "ccc", "ddd", "eee", "fff", "ggg"]
+for target in zip(targets):
     indicesToKeep = finalDf['Company'] == target
     ax.scatter(finalDf.loc[indicesToKeep, 'principal component 1']
                , finalDf.loc[indicesToKeep, 'principal component 2'])
 
-finalDf.plot()
 ax.legend(targets)
 ax.grid()
 plt.show()
